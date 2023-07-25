@@ -5,20 +5,20 @@
 
 2. Authentication / Authorization to ECR
 - For Public Repositories, permission needed :
->> ecr-public:GetAuthorizationToken
+> ecr-public:GetAuthorizationToken
 
->> sts:getservicebearertoken
+> sts:getservicebearertoken
 
->> **Command:**
+> **Command:**
 ```sh
 aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/<'registry alias'>
 IAM Policy: AmazonElasticContainerRegistryPublicPowerUser (AWS Managed Policy)
 ```
 
 - For Private Repositories, permission needed :
->> ecr:GetAuthorizationToken
+> ecr:GetAuthorizationToken
 
->> **Command :**
+> **Command :**
  ```sh
  aws ecr get-login-password --region ap-southeast-1 | docker login --username AWS --password-stdin <"aws account number">.dkr.ecr.ap-southeast-1.amazonaws.com
 IAM Policy: AmazonEC2ContainerRegistryPowerUser (AWS Managed Policy)
