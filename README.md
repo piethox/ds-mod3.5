@@ -11,7 +11,7 @@
 
 > **Command:**
 ```sh
-aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/<'registry alias'>
+aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/<registry alias>
 IAM Policy: AmazonElasticContainerRegistryPublicPowerUser (AWS Managed Policy)
 ```
 
@@ -20,7 +20,7 @@ IAM Policy: AmazonElasticContainerRegistryPublicPowerUser (AWS Managed Policy)
 
 > **Command :**
  ```sh
- aws ecr get-login-password --region ap-southeast-1 | docker login --username AWS --password-stdin <"aws account number">.dkr.ecr.ap-southeast-1.amazonaws.com
+ aws ecr get-login-password --region ap-southeast-1 | docker login --username AWS --password-stdin <aws account number>.dkr.ecr.ap-southeast-1.amazonaws.com
 IAM Policy: AmazonEC2ContainerRegistryPowerUser (AWS Managed Policy)
 ```
 
@@ -43,7 +43,7 @@ docker tag <IMAGE_NAME>:<IMAGE_TAG>  <REPOSITORY_URI>:<IMAGE_TAG>
 ```
 - **Command example with our image and repository**
 ```sh
-docker tag simple-app-image:latest <"account no.">.dkr.ecr.ap-southeast-1.amazonaws.com/<REPOSITORY_NAME>:latest
+docker tag simple-app-image:latest <account no.>.dkr.ecr.ap-southeast-1.amazonaws.com/<REPOSITORY_NAME>:latest
 ```
 - **Command to push image:**
 ```sh
